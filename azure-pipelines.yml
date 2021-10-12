@@ -10,11 +10,7 @@ stages:
         environment: Test
       - job: UpdateChangeRequest
         steps:
-        - task: PowerShell@2
+        - task: Delay@1
           inputs:
-            targetType: 'inline'
-            script: |
-              # Write your PowerShell commands here.
-              
-              Write-Host "Hello World"
+            delayForMinutes: '1'
 pool: server
